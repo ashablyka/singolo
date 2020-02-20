@@ -117,3 +117,59 @@ ul {
 .navigation__link:hover {
   color: #f06c64;
 }
+
+.slider__wrapper {
+  background: #f06c64;
+}
+
+.slide {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+.iphone-vertical {
+  background: url("./assets/img/iphone-vertical.png");
+  width: 240px;
+  height: 483px;
+  position: absolute;
+  top: 53px;
+  left: 72px;
+}
+
+.iphone-horizontal {
+  background: url("./assets/img/iphone-horizontal.png");
+  width: 484px;
+  height: 240px;
+  position: absolute;
+  top: 174px;
+  left: 385px;
+}
+
+.arrow-left {
+  background: url(./assets/img/arrow-left.svg);
+  width: 16px;
+  height: 27px;
+  position: absolute;
+  top: 281px;
+  left: 2px;
+}
+
+.arrow-left:hover {
+  background: url(./assets/img/arrow-left-hover.svg);
+  cursor: pointer;
+}
+
+.arrow-right {
+  background: url(./assets/img/arrow-right.svg);
+  width: 16px;
+  height: 27px;
+  position: absolute;
+  top: 281px;
+  right: 0;
+}
+
+.arrow-right:hover {
+  background: url(./assets/img/arrow-right-hover.svg);
+  cursor: pointer;
+}
