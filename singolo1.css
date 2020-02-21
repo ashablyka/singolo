@@ -110,10 +110,6 @@ ul {
   position: relative;
 }
 
-.navigation__link_active {
-  color: #f06c64;
-}
-
 .navigation__link:hover {
   color: #f06c64;
 }
