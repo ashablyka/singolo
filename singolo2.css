@@ -46,20 +46,21 @@
   font-weight: 400;
   margin-right: 10px;
   padding: 0 5px;
+  cursor: pointer;
 }
 
 .button:hover {
-  cursor: pointer;
+  box-shadow: 0 0 3px 3px #eff2fa11;
 }
 
 .button:focus {
   outline: 0;
-  box-shadow: 0 0 3px 3px #eff2fa11;;
+  box-shadow: 0 0 3px 3px #eff2fa11;
 }
 
 .button_bordered {
   color: #dedede;
-  border-color: #c5c5c5; 
+  border-color: #c5c5c5;
 }
 
 .button_wide {
@@ -75,4 +76,105 @@
 
 .gallery__picture {
   margin-bottom: 20px;
+}
+
+.about-us__wrapper {
+  background: #f1f1f1;
+  flex-direction: column;
+  padding-top: 68px;
+  padding-bottom: 67px;
+  border-bottom: 6px solid #ffffff;
+}
+
+.about-us__heading {
+  font-size: 30px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  text-transform: capitalize;
+  color: #666d89;
+  margin-bottom: 27px;
+}
+
+.about-us__description {
+  margin-bottom: 45px;
+}
+
+.layout-3-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 300px;
+}
+
+.card__image {
+  margin-bottom: 12px;
+}
+
+.card__heading {
+  font-size: 18px;
+  line-height: 18px;
+  color: #666d89;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+.card__description {
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-weight: 400;
+  text-align: justify;
+  margin-bottom: 22px;
+}
+
+.card__icons {
+  display: flex;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #666d89;
+  margin-right: 8px;
+}
+
+.icon-circle:hover {
+  border-color: #2d2f39;
+}
+
+.facebook {
+  background: url("./assets/img/facebook-icon.svg") center no-repeat;
+}
+
+.facebook:hover {
+  background: url("./assets/img/facebook-icon-hover.svg") center no-repeat;
+}
+
+.google {
+  background: url("./assets/img/google-icon.svg") center no-repeat;
+}
+
+.google:hover {
+  background: url("./assets/img/google-icon-hover.svg") center no-repeat;
+}
+
+.twitter {
+  background: url("./assets/img/twitter-icon.svg") center no-repeat;
+}
+
+.twitter:hover {
+  background: url("./assets/img/twitter-icon-hover.svg") center no-repeat;
+}
+
+.linkedin {
+  background: url("./assets/img/linkedin-icon.svg") center no-repeat;
+}
+
+.linkedin:hover {
+  background: url("./assets/img/linkedin-icon-hover.svg") center no-repeat;
 }
