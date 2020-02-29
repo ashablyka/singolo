@@ -78,6 +78,10 @@
   margin-bottom: 20px;
 }
 
+.gallery__picture:nth-child(n + 13) {
+  display: none;
+}
+
 .about-us__wrapper {
   background: #f1f1f1;
   flex-direction: column;
@@ -120,6 +124,9 @@
   font-weight: 900;
   letter-spacing: -0.2px;
   margin-bottom: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__description {
