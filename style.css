@@ -102,6 +102,10 @@ ul {
   border-radius: 50%;
 }
 
+.navigation__item_active {
+  color: #f06c64;
+}
+
 .navigation__link {
   position: relative;
   padding-left: 30px;
