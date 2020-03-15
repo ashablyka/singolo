@@ -478,6 +478,11 @@ ul {
 
 .gallery__picture {
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.gallery__picture_active {
+  border: 5px solid #f06c64;
 }
 
 .gallery__picture:nth-child(n + 13) {

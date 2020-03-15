@@ -59,3 +59,35 @@ function changeScreenMode(phoneSelected) {
   screenSelectedElement.classList.remove(`${currentMode}`);
   screenSelectedElement.classList.add(`${newMode}`);
 }
+
+//Portfolio
+const portfolioButtonsElements = document.querySelector(".portfolio__buttons");
+const galleryElement = document.querySelector(".gallery");
+
+portfolioButtonsElements.addEventListener("click", event => {
+  if (event.target.classList.contains("portfolio__button")) {
+    reorderPictures();
+  }
+  setActive("portfolio__button", "button_bordered", event);
+});
+
+function reorderPictures() {
+  const firstPicture = galleryElement.children[0];
+  const firstPictureCopy = firstPicture.cloneNode();
+  firstPicture.remove();
+  galleryElement.append(firstPictureCopy);
+}
+
+galleryElement.addEventListener("click", event => {
+  setActive(`gallery__picture`, `gallery__picture_active`, event);
+});
+
+function setActive(elementsClass, activeClass, event) {
+  if (event.target.classList.contains(`${elementsClass}`)) {
+    const elements = document.querySelectorAll(`.${elementsClass}`);
+    elements.forEach(element => {
+      element.classList.remove(`${activeClass}`);
+    });
+    event.target.closest(`.${elementsClass}`).classList.add(`${activeClass}`);
+  }
+}
