@@ -120,20 +120,37 @@ ul {
 }
 
 .slider__wrapper {
+  height: 600px;
+  padding: 0;
   background: #f06c64;
-  border-bottom: 6px solid #ea676b;
+  position: relative;
 }
 
 .slide {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 594px;
+  height: 600px;
+  display: none;
+}
+
+.slide-1 {
+  border-bottom: 6px solid #ea676b;
+}
+
+.slide-2 {
+  background: url(./assets/img/slide-2.jpg) no-repeat;
+  border: 0;
+  display: none;
+}
+
+.slide_active {
+  display: block;
 }
 
 .iphone-vertical {
   position: absolute;
   top: 53px;
-  left: 72px;
+  left: 112px;
   width: 240px;
   height: 483px;
   background: url("./assets/img/iphone-vertical.png");
@@ -142,7 +159,7 @@ ul {
 .iphone-horizontal {
   position: absolute;
   top: 174px;
-  left: 385px;
+  left: 425px;
   width: 484px;
   height: 240px;
   background: url("./assets/img/iphone-horizontal.png");
@@ -151,7 +168,7 @@ ul {
 .arrow-left {
   position: absolute;
   top: 281px;
-  left: 2px;
+  left: 42px;
   width: 16px;
   height: 27px;
   background: url(./assets/img/arrow-left.svg);
@@ -165,7 +182,7 @@ ul {
 .arrow-right {
   position: absolute;
   top: 281px;
-  right: 0;
+  right: 40px;
   width: 16px;
   height: 27px;
   background: url(./assets/img/arrow-right.svg);
