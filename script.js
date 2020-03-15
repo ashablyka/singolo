@@ -33,3 +33,29 @@ arrowRightElement.addEventListener("click", () => {
     (currentSlide + 1 + slideElements.length) % slideElements.length;
   slideElements[currentSlide].classList.add("slide_active");
 });
+
+// Screen switcher
+const slide1Element = document.querySelector(".slide-1");
+
+slide1Element.addEventListener("click", event => {
+  let phoneSelectedElement = event.target.closest(".base");
+  changeScreenMode(phoneSelectedElement);
+});
+
+function changeScreenMode(phoneSelected) {
+  const screenSelectedElement = phoneSelected.querySelector(".screen");
+  
+  let currentMode;
+  let newMode;
+
+  if (screenSelectedElement.classList.contains("screen_on")) {
+    currentMode = "screen_on";
+    newMode = "screen_off";
+  } else {
+    currentMode = "screen_off";
+    newMode = "screen_on";
+  }
+
+  screenSelectedElement.classList.remove(`${currentMode}`);
+  screenSelectedElement.classList.add(`${newMode}`);
+}

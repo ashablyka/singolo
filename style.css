@@ -148,12 +148,51 @@ ul {
 }
 
 .iphone-vertical {
+  position: relative;
+}
+
+.shadow-vertical {
   position: absolute;
+  z-index: 10;
   top: 53px;
   left: 112px;
   width: 240px;
   height: 483px;
-  background: url("./assets/img/iphone-vertical.png");
+  background: url("./assets/img/shadow-vertical.png") no-repeat;
+}
+
+.base {
+  cursor: pointer;
+}
+
+.base-vertical {
+  position: absolute;
+  z-index: 20;
+  top: 53px;
+  left: 112px;
+  width: 215px;
+  height: 458px;
+  background: url("./assets/img/base-vertical.png") no-repeat;
+}
+
+.screen-vertical {
+  position: absolute;
+  z-index: 30;
+  top: 62px;
+  left: 11px;
+  width: 194px;
+  height: 339px;
+  background: url("./assets/img/screen-vertical.jpg") no-repeat;
+}
+
+.screen_on {
+  opacity: 1;
+  transition: 0.1s;
+}
+
+.screen_off {
+  opacity: 0;
+  transition: 0.4s;
 }
 
 .iphone-horizontal {
