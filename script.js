@@ -5,12 +5,7 @@ const navigationItemsElements = navigationElement.querySelectorAll(
 );
 
 navigationElement.addEventListener("click", event => {
-  navigationItemsElements.forEach(navigationItem => {
-    navigationItem.classList.remove("navigation__item_active");
-  });
-  event.target
-    .closest(".navigation__item")
-    .classList.add("navigation__item_active");
+  setActive("navigation__link", "navigation__link_active", event);
 });
 
 // Slider
