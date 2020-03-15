@@ -44,7 +44,7 @@ slide1Element.addEventListener("click", event => {
 
 function changeScreenMode(phoneSelected) {
   const screenSelectedElement = phoneSelected.querySelector(".screen");
-  
+
   let currentMode;
   let newMode;
 

@@ -147,8 +147,13 @@ ul {
   display: block;
 }
 
-.iphone-vertical {
+.iphone-vertical,
+.iphone-horizontal {
   position: relative;
+}
+
+.base {
+  cursor: pointer;
 }
 
 .shadow-vertical {
@@ -159,10 +164,6 @@ ul {
   width: 240px;
   height: 483px;
   background: url("./assets/img/shadow-vertical.png") no-repeat;
-}
-
-.base {
-  cursor: pointer;
 }
 
 .base-vertical {
@@ -185,6 +186,36 @@ ul {
   background: url("./assets/img/screen-vertical.jpg") no-repeat;
 }
 
+.shadow-horizontal {
+  position: absolute;
+  z-index: 10;
+  top: 174px;
+  left: 426px;
+  width: 483px;
+  height: 240px;
+  background: url("./assets/img/shadow-horizontal.png") no-repeat;
+}
+
+.base-horizontal {
+  position: absolute;
+  z-index: 20;
+  top: 174px;
+  left: 425px;
+  width: 458px;
+  height: 215px;
+  background: url("./assets/img/base-horizontal.png") no-repeat;
+}
+
+.screen-horizontal {
+  position: absolute;
+  z-index: 30;
+  top: 11px;
+  left: 57px;
+  width: 339px;
+  height: 194px;
+  background: url("./assets/img/screen-horizontal.jpg") no-repeat;
+}
+
 .screen_on {
   opacity: 1;
   transition: 0.1s;
@@ -193,15 +224,6 @@ ul {
 .screen_off {
   opacity: 0;
   transition: 0.4s;
-}
-
-.iphone-horizontal {
-  position: absolute;
-  top: 174px;
-  left: 425px;
-  width: 484px;
-  height: 240px;
-  background: url("./assets/img/iphone-horizontal.png");
 }
 
 .arrow-left {
