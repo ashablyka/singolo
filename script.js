@@ -99,7 +99,7 @@ portfolioButtonsElements.addEventListener("click", event => {
   setActive("portfolio__button", "button_bordered", event);
   picturesElements.forEach(picture => {
     picture.classList.remove("gallery__picture_active");
-  })
+  });
 });
 
 function reorderPictures() {
@@ -162,10 +162,10 @@ modalCloseButton.addEventListener("click", () => {
   formElement.reset();
 });
 
-nameInput.addEventListener("focus", () => {
-  nameInput.classList.remove("invalid");
+nameInput.addEventListener("focus", function() {
+  this.classList.remove("invalid");
 });
 
-emailInput.addEventListener("focus", () => {
-  emailInput.classList.remove("invalid");
+emailInput.addEventListener("focus", function() {
+  this.classList.remove("invalid");
 });
