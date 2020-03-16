@@ -63,7 +63,10 @@ const slide1Element = document.querySelector(".slide-1");
 
 slide1Element.addEventListener("click", event => {
   let phoneSelectedElement = event.target.closest(".base");
-  changeScreenMode(phoneSelectedElement);
+
+  if (phoneSelectedElement) {
+    changeScreenMode(phoneSelectedElement);
+  }
 });
 
 function changeScreenMode(phoneSelected) {
