@@ -124,18 +124,18 @@
           <ul class="portfolio__buttons">
             <li>
               <button
-                class="portfolio__button button button_bordered button_wide"
+                class="portfolio__button c-button button button_bordered button_wide"
               >
                 All
               </button>
             </li>
             <li>
-              <button class="portfolio__button button">Web Design</button>
+              <button class="portfolio__button c-button button">Web Design</button>
             </li>
             <li>
-              <button class="portfolio__button button">Graphic Design</button>
+              <button class="portfolio__button c-button button">Graphic Design</button>
             </li>
-            <li><button class="portfolio__button button">Artwork</button></li>
+            <li><button class="portfolio__button c-button button">Artwork</button></li>
           </ul>
           <div class="gallery">
             <img
@@ -340,7 +340,7 @@
             tortor mauris condimentum nibh.
           </p>
           <div class="contact-section">
-            <form class="get-a-quote__form contact-form" action="#">
+            <form id="form" class="get-a-quote__form contact-form" action="#">
               <input
                 class="contact-form__item input-name"
                 type="text"
@@ -362,6 +362,7 @@
                 type="text"
                 name="subject"
                 id="subject"
+                maxlength="30"
                 placeholder="Subject"
               />
               <textarea
@@ -370,9 +371,14 @@
                 id="textarea"
                 cols="30"
                 rows="9"
+                maxlength="700"
                 placeholder="Describe your project in detail..."
               ></textarea>
-              <button class="contact-form__item button-submit" type="submit">
+              <button
+                id="contact-form-submit"
+                class="c-button contact-form__item button-submit"
+                type="submit"
+              >
                 Submit
               </button>
             </form>
@@ -427,6 +433,14 @@
         </ul>
       </div>
     </footer>
+    <div class="modal-wrapper visually-hidden">
+      <div id="modal-window" class="modal-window">
+        <p class="modal-result-message">The letter was sent</p>
+        <p class="modal-message" id="modal-subject"></p>
+        <p class="modal-message" id="modal-description"></p>
+        <button id="modal-close-button" class="c-button modal-button">OK</button>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
