@@ -11,20 +11,52 @@ const arrowRightElement = document.querySelector(".arrow-right");
 const slideElements = document.querySelectorAll(".slide");
 
 let currentSlide = 0;
+let isEnable = true;
 
 arrowLeftElement.addEventListener("click", () => {
-  slideElements[currentSlide].classList.remove("slide_active");
-  currentSlide =
-    (currentSlide - 1 + slideElements.length) % slideElements.length;
-  slideElements[currentSlide].classList.add("slide_active");
+  if (isEnable) {
+    showPreviousSlide(currentSlide);
+  }
 });
 
 arrowRightElement.addEventListener("click", () => {
-  slideElements[currentSlide].classList.remove("slide_active");
-  currentSlide =
-    (currentSlide + 1 + slideElements.length) % slideElements.length;
-  slideElements[currentSlide].classList.add("slide_active");
+  if (isEnable) {
+    showNextSlide(currentSlide);
+  }
 });
+
+function showPreviousSlide(currentSlide) {
+  hideSlide("to-right");
+  changeCurrentSlide(currentSlide - 1);
+  showSlide("from-left");
+}
+
+function showNextSlide(currentSlide) {
+  hideSlide("to-left");
+  changeCurrentSlide(currentSlide + 1);
+  showSlide("from-right");
+}
+
+function hideSlide(direction) {
+  isEnable = false;
+  slideElements[currentSlide].classList.add(direction);
+  slideElements[currentSlide].addEventListener("animationend", function() {
+    this.classList.remove("slide_active", direction);
+  });
+}
+
+function changeCurrentSlide(newSlide) {
+  currentSlide = (slideElements.length + newSlide) % slideElements.length;
+}
+
+function showSlide(direction) {
+  slideElements[currentSlide].classList.add("next-slide", direction);
+  slideElements[currentSlide].addEventListener("animationend", function() {
+    this.classList.remove("next-slide", direction);
+    this.classList.add("slide_active");
+    isEnable = true;
+  });
+}
 
 // Screen switcher
 const slide1Element = document.querySelector(".slide-1");
@@ -129,4 +161,4 @@ nameInput.addEventListener("focus", () => {
 
 emailInput.addEventListener("focus", () => {
   emailInput.classList.remove("invalid");
-})
+});
