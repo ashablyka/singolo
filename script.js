@@ -90,12 +90,16 @@ function changeScreenMode(phoneSelected) {
 //Portfolio
 const portfolioButtonsElements = document.querySelector(".portfolio__buttons");
 const galleryElement = document.querySelector(".gallery");
+const picturesElements = document.querySelectorAll(".gallery__picture");
 
 portfolioButtonsElements.addEventListener("click", event => {
   if (event.target.classList.contains("portfolio__button")) {
     reorderPictures();
   }
   setActive("portfolio__button", "button_bordered", event);
+  picturesElements.forEach(picture => {
+    picture.classList.remove("gallery__picture_active");
+  })
 });
 
 function reorderPictures() {
