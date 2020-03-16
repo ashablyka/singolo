@@ -680,11 +680,13 @@ ul {
 }
 
 .button-submit {
-  width: 150px;
+  width: 100px;
   height: 35px;
   padding: 0;
-  background: #993d39;
-  font-size: 16px;
+  color: #886a30;
+  background: #fbc65f;
+  font-size: 14px;
+  font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -776,11 +778,13 @@ ul {
 .modal-button {
   margin: 10px;
   border-radius: 5px;
-  background: #f48c8f;
-  color: #ffffff;
+  background: #fbc65f;
+  color: #886a30;
   padding: 8px 16px;
   font-size: 16px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .invalid {
