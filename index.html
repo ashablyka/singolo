@@ -7,46 +7,57 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
+    <header id="home" class="header">
       <div class="header__wrapper wrapper">
         <a href="#">
           <h1 class="logo">Singolo<span class="logo__star">*</span></h1>
         </a>
         <nav class="header__navigation">
-          <ul class="navigation">
+          <ul id="navigation" class="navigation">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">
+              <a class="navigation__link navigation__link_active" href="#home">
                 Home
               </a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Services</a>
+              <a class="navigation__link" href="#services">Services</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Portfolio</a>
+              <a class="navigation__link" href="#portfolio">Portfolio</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">About</a>
+              <a class="navigation__link" href="#about">About</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Contact</a>
+              <a class="navigation__link" href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="slider">
+      <div id="slider" class="slider">
         <div class="slider__wrapper wrapper">
-          <div class="slide">
-            <div class="iphone-vertical"></div>
-            <div class="iphone-horizontal"></div>
-            <div class="arrow-left"></div>
-            <div class="arrow-right"></div>
+          <div class="slide slide-1 slide_active">
+            <div class="iphone-vertical">
+              <div class="shadow-vertical"></div>
+              <div class="base-vertical base">
+                <div class="screen-vertical screen screen_on"></div>
+              </div>
+            </div>
+            <div class="iphone-horizontal">
+              <div class="shadow-horizontal"></div>
+              <div class="base-horizontal base">
+                <div class="screen-horizontal screen screen_on"></div>
+              </div>
+            </div>
           </div>
+          <div class="slide slide-2"></div>
+          <div class="arrow-left"></div>
+          <div class="arrow-right"></div>
         </div>
       </div>
-      <section class="our-services">
+      <section id="services" class="our-services">
         <div class="our-services__wrapper wrapper">
           <h2 class="our-services__heading">Our services</h2>
           <p class="our-services__description section-description">
@@ -103,7 +114,7 @@
           </ul>
         </div>
       </section>
-      <section class="portfolio">
+      <section id="portfolio" class="portfolio">
         <div class="portfolio__wrapper wrapper">
           <h2 class="portfolio__heading">Portfolio</h2>
           <p class="portfolio__description section-description">
@@ -113,18 +124,18 @@
           <ul class="portfolio__buttons">
             <li>
               <button
-                class="portfolio__button button button_bordered button_wide"
+                class="portfolio__button c-button button button_bordered button_wide"
               >
                 All
               </button>
             </li>
             <li>
-              <button class="portfolio__button button">Web Design</button>
+              <button class="portfolio__button c-button button">Web Design</button>
             </li>
             <li>
-              <button class="portfolio__button button">Graphic Design</button>
+              <button class="portfolio__button c-button button">Graphic Design</button>
             </li>
-            <li><button class="portfolio__button button">Artwork</button></li>
+            <li><button class="portfolio__button c-button button">Artwork</button></li>
           </ul>
           <div class="gallery">
             <img
@@ -211,17 +222,10 @@
               alt=""
               class="gallery__picture"
             />
-            <img
-              src="./assets/img/picture-12.jpg"
-              width="220"
-              height="187"
-              alt=""
-              class="gallery__picture"
-            />
           </div>
         </div>
       </section>
-      <section class="about-us">
+      <section id="about" class="about-us">
         <div class="about-us__wrapper wrapper">
           <h2 class="about-us__heading">About Us</h2>
           <p class="about-us__description section-description">
@@ -326,7 +330,7 @@
           </ul>
         </div>
       </section>
-      <section class="get-a-quote">
+      <section id="contact" class="get-a-quote">
         <div class="get-a-quote__wrapper wrapper">
           <h2 class="get-a-quote__heading">Get a Quote</h2>
           <p class="get-a-quote_description section-description">
@@ -336,7 +340,7 @@
             tortor mauris condimentum nibh.
           </p>
           <div class="contact-section">
-            <form class="get-a-quote__form contact-form" action="#">
+            <form id="form" class="get-a-quote__form contact-form" action="#">
               <input
                 class="contact-form__item input-name"
                 type="text"
@@ -358,6 +362,7 @@
                 type="text"
                 name="subject"
                 id="subject"
+                maxlength="30"
                 placeholder="Subject"
               />
               <textarea
@@ -366,9 +371,14 @@
                 id="textarea"
                 cols="30"
                 rows="9"
+                maxlength="700"
                 placeholder="Describe your project in detail..."
               ></textarea>
-              <button class="contact-form__item button-submit" type="submit">
+              <button
+                id="contact-form-submit"
+                class="c-button contact-form__item button-submit"
+                type="submit"
+              >
                 Submit
               </button>
             </form>
@@ -423,5 +433,14 @@
         </ul>
       </div>
     </footer>
+    <div class="modal-wrapper visually-hidden">
+      <div id="modal-window" class="modal-window">
+        <p class="modal-result-message">The letter was sent</p>
+        <p class="modal-message" id="modal-subject"></p>
+        <p class="modal-message" id="modal-description"></p>
+        <button id="modal-close-button" class="c-button modal-button">OK</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>
