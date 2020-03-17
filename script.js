@@ -123,6 +123,19 @@ function setActive(elementsClass, activeClass, event) {
   }
 }
 
+// Calculating scrollbar width
+const divTest = document.createElement("div");
+
+divTest.style.overflowY = "scroll";
+divTest.style.width = "50px";
+divTest.style.height = "50px";
+
+document.body.append(divTest);
+
+const scrollWidth = divTest.offsetWidth - divTest.clientWidth;
+
+divTest.remove();
+
 // Form submit
 const formElement = document.querySelector("#form");
 const submitFormButton = document.querySelector("#contact-form-submit");
@@ -154,12 +167,16 @@ submitFormButton.addEventListener("click", event => {
     modalDescriptionElement.innerText = textareaInput.value
       ? `Description: ${textareaInput.value}`
       : "Without description";
+    document.body.classList.add("locked");
+    document.body.style.paddingRight = `${scrollWidth}px`;
   }
 });
 
 modalCloseButton.addEventListener("click", () => {
   modalWrapperElement.classList.add("visually-hidden");
+  document.body.classList.remove("locked");
   formElement.reset();
+  document.body.style.paddingRight = "";
 });
 
 nameInput.addEventListener("focus", function() {
