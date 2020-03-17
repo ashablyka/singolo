@@ -184,19 +184,19 @@ ul {
 
 @keyframes left {
   from {
-      left: 0;
+    left: 0;
   }
   to {
-      left: -100%;
+    left: -100%;
   }
 }
 
 @keyframes right {
   from {
-      left: 0;
+    left: 0;
   }
   to {
-      left: 100%;
+    left: 100%;
   }
 }
 
@@ -538,6 +538,10 @@ ul {
 .gallery__picture {
   margin-bottom: 20px;
   cursor: pointer;
+}
+
+.gallery__picture:focus {
+  outline: 5px solid #f06c64;
 }
 
 .gallery__picture_active {
