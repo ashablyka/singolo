@@ -1,9 +1,56 @@
 // Navigation
 const navigationElement = document.querySelector("#navigation");
+const headerElement = document.querySelector("#home");
 
 navigationElement.addEventListener("click", event => {
   setActive("navigation__link", "navigation__link_active", event);
 });
+
+document.addEventListener("scroll", onScroll);
+
+function onScroll() {
+  const curPos = window.scrollY;
+  const links = document.querySelectorAll(".navigation__link");
+  const sections = Array.from(links).map(link =>
+    document.querySelector(`${link.getAttribute("href")}`)
+  );
+  const headerHeight = headerElement.offsetHeight;
+
+  sections.forEach(section => {
+    if (headerHeight >= curPos) {
+      links.forEach(link => {
+        link.classList.remove("navigation__link_active");
+      });
+      document
+        .querySelector("[href='#home']")
+        .classList.add("navigation__link_active");
+    }
+
+    if (
+      section.offsetTop - headerHeight <= curPos &&
+      section.offsetTop + section.offsetHeight - headerHeight > curPos
+    ) {
+      links.forEach(link => {
+        link.classList.remove("navigation__link_active");
+        if (section.getAttribute("id") === link.getAttribute("href").slice(1)) {
+          link.classList.add("navigation__link_active");
+        }
+      });
+    }
+
+    if (
+      curPos ===
+      document.body.clientHeight - document.documentElement.clientHeight
+    ) {
+      links.forEach(link => {
+        link.classList.remove("navigation__link_active");
+      });
+      document
+        .querySelector("[href='#contact']")
+        .classList.add("navigation__link_active");
+    }
+  });
+}
 
 // Slider
 const arrowLeftElement = document.querySelector(".arrow-left");
