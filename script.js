@@ -204,7 +204,7 @@ const modalSubjectElement = document.querySelector("#modal-subject");
 const modalDescriptionElement = document.querySelector("#modal-description");
 const modalCloseButton = document.querySelector("#modal-close-button");
 
-submitFormButton.addEventListener("click", event => {
+formElement.addEventListener("submit", event => {
   event.preventDefault();
 
   if (!nameInput.value) {
