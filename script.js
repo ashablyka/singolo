@@ -210,10 +210,10 @@ submitFormButton.addEventListener("click", event => {
     modalWrapperElement.classList.remove("visually-hidden");
     modalSubjectElement.innerText = subjectInput.value
       ? `Subject: ${subjectInput.value}`
-      : "Without subject";
+      : "No subject";
     modalDescriptionElement.innerText = textareaInput.value
       ? `Description: ${textareaInput.value}`
-      : "Without description";
+      : "No description";
     document.body.classList.add("locked");
     document.body.style.paddingRight = `${scrollWidth}px`;
   }
