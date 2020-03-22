@@ -160,6 +160,15 @@ galleryElement.addEventListener("click", event => {
   setActive(`gallery__picture`, `gallery__picture_active`, event);
 });
 
+picturesElements.forEach(picture => {
+  picture.addEventListener("focus", event => {
+    picturesElements.forEach(pic => {
+      pic.classList.remove(`gallery__picture_active`);
+    });
+    setActive(`gallery__picture`, `gallery__picture_active`, event);
+  });
+});
+
 function setActive(elementsClass, activeClass, event) {
   if (event.target.classList.contains(`${elementsClass}`)) {
     const elements = document.querySelectorAll(`.${elementsClass}`);
