@@ -52,6 +52,27 @@ function onScroll() {
   });
 }
 
+const menuButtonElement = document.querySelector(".button-menu");
+const menuWrapperElement = document.querySelector(".menu-wrapper");
+const mobileHeadingElement = document.querySelector(".mobile-heading");
+
+menuButtonElement.addEventListener("click", () => {
+  menuButtonElement.classList.toggle("button-menu_active");
+  menuWrapperElement.classList.toggle("menu-wrapper_active");
+});
+
+menuWrapperElement.addEventListener("transitionend", () => {
+  if (!menuWrapperElement.classList.contains("menu-wrapper_active")) {
+    mobileHeadingElement.classList.remove("visually-hidden");
+  }
+});
+
+menuWrapperElement.addEventListener("transitionstart", () => {
+  if (menuWrapperElement.classList.contains("menu-wrapper_active")) {
+    mobileHeadingElement.classList.add("visually-hidden");
+  }
+});
+
 // Slider
 const arrowLeftElement = document.querySelector(".arrow-left");
 const arrowRightElement = document.querySelector(".arrow-right");
