@@ -231,20 +231,21 @@ ul {
   }
 }
 
-.iphone-vertical,
-.iphone-horizontal {
-  position: relative;
-}
-
 .base {
   cursor: pointer;
+}
+
+.iphone-vertical {
+  position: absolute;
+  top: 53px;
+  left: 112px;
+  width: 240px;
+  height: 483px;
 }
 
 .shadow-vertical {
   position: absolute;
   z-index: 10;
-  top: 53px;
-  left: 112px;
   width: 240px;
   height: 483px;
   background: url("./assets/img/shadow-vertical.png") no-repeat;
@@ -253,8 +254,6 @@ ul {
 .base-vertical {
   position: absolute;
   z-index: 20;
-  top: 53px;
-  left: 112px;
   width: 215px;
   height: 458px;
   background: url("./assets/img/base-vertical.png") no-repeat;
@@ -263,18 +262,24 @@ ul {
 .screen-vertical {
   position: absolute;
   z-index: 30;
-  top: 62px;
-  left: 11px;
+  top: 13.5%;
+  left: 5%;
   width: 194px;
   height: 339px;
   background: url("./assets/img/screen-vertical.jpg") no-repeat;
 }
 
+.iphone-horizontal {
+  position: absolute;
+  top: 174px;
+  right: 112px;
+  width: 483px;
+  height: 240px;
+}
+
 .shadow-horizontal {
   position: absolute;
   z-index: 10;
-  top: 174px;
-  left: 426px;
   width: 483px;
   height: 240px;
   background: url("./assets/img/shadow-horizontal.png") no-repeat;
@@ -283,8 +288,6 @@ ul {
 .base-horizontal {
   position: absolute;
   z-index: 20;
-  top: 174px;
-  left: 425px;
   width: 458px;
   height: 215px;
   background: url("./assets/img/base-horizontal.png") no-repeat;
@@ -883,6 +886,67 @@ ul {
 }
 
 @media (max-width: 1019px) {
+  .slider__wrapper {
+    height: 452px;
+  }
+
+  .slide {
+    height: 452px;
+  }
+
+  .iphone-vertical {
+    top: 44px;
+    left: 11%;
+    width: 180px;
+    height: 363px;
+  }
+
+  .shadow-vertical {
+    width: 180px;
+    height: 363px;
+    background-size: 100%;
+  }
+
+  .base-vertical {
+    width: 161px;
+    height: 344px;
+    background-size: 100%;
+  }
+
+  .screen-vertical {
+    width: 146px;
+    height: 254px;
+    background-size: 100%;
+    top: 46px;
+    left: 8px;
+  }
+
+  .iphone-horizontal {
+    top: 130px;
+    right: 11%;
+    width: 363px;
+    height: 180px;
+  }
+
+  .shadow-horizontal {
+    width: 363px;
+    height: 180px;
+    background-size: 100%;
+  }
+
+  .base-horizontal {
+    width: 344px;
+    height: 161px;
+    background-size: 100%;
+  }
+
+  .screen-horizontal {
+    width: 254px;
+    height: 146px;
+    background-size: 100%;
+    top: 8px;
+    left: 43px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -954,6 +1018,62 @@ ul {
     font-size: 24px;
     line-height: 29px;
     margin: 0;
+  }
+
+  .slider__wrapper {
+    height: 220px;
+  }
+
+  .slide {
+    height: 220px;
+  }
+
+  .iphone-vertical {
+    top: 22px;
+    left: 3%;
+    width: 90px;
+    height: 181px;
+  }
+
+  .shadow-vertical {
+    width: 90px;
+    height: 181px;
+  }
+
+  .base-vertical {
+    width: 81px;
+    height: 172px;
+  }
+
+  .screen-vertical {
+    width: 73px;
+    height: 127px;
+    top: 23px;
+    left: 4px;
+  }
+
+  .iphone-horizontal {
+    top: 65px;
+    right: 18%;
+    width: 181px;
+    height: 90px;
+  }
+
+  .shadow-horizontal {
+    width: 181px;
+    height: 90px;
+  }
+
+  .base-horizontal {
+    width: 172px;
+    height: 81px;
+  }
+
+  .screen-horizontal {
+    width: 127px;
+    height: 73px;
+    top: 4px;
+    left: 22px;
   }
 
   .visually-hidden {
