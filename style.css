@@ -410,14 +410,17 @@ ul {
 
 .services {
   display: flex;
+  justify-content: space-between;
   flex-flow: row wrap;
+  margin: 0 auto;
 }
 
 .service {
   position: relative;
   width: 300px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding-left: 80px;
+  height: 104px;
 }
 
 .service::before {
@@ -459,11 +462,6 @@ ul {
   background: url(./assets/img/pen.svg) no-repeat;
 }
 
-.ideas {
-  width: 320px;
-  padding-left: 100px;
-}
-
 .ideas::after {
   content: "";
   position: absolute;
@@ -472,11 +470,6 @@ ul {
   width: 32px;
   height: 32px;
   background: url(./assets/img/bulb.svg) no-repeat;
-}
-
-.answer {
-  width: 320px;
-  padding-left: 100px;
 }
 
 .answer::after {
@@ -499,11 +492,6 @@ ul {
   background: url(./assets/img/phone.svg) no-repeat;
 }
 
-.support {
-  width: 320px;
-  padding-left: 100px;
-}
-
 .support::after {
   content: "";
   position: absolute;
@@ -512,11 +500,6 @@ ul {
   width: 32px;
   height: 32px;
   background: url(./assets/img/bubble.svg) no-repeat;
-}
-
-.star {
-  width: 320px;
-  padding-left: 100px;
 }
 
 .star::after {
@@ -917,6 +900,28 @@ ul {
 }
 
 @media (max-width: 1019px) {
+  .header__navigation {
+    bottom: 5px;
+    left: -2px;
+  }
+
+  .our-services__wrapper {
+    padding-top: 48px;
+    padding-bottom: 17px;
+  }
+
+  .our-services__description {
+    margin-bottom: 36px;
+  }
+
+  .services {
+    width: 653px;
+    margin: 0;
+  }
+
+  .service {
+    margin-bottom: 40px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -994,13 +999,48 @@ ul {
     padding: 0;
   }
 
+  .our-services__wrapper {
+    padding-top: 36px;
+    padding-bottom: 7px;
+  }
+
+  .our-services__description {
+    letter-spacing: 0.05px;
+    margin-bottom: 30px;
+  }
+
+  .services {
+    width: 300px;
+  }
+
+  .service {
+    margin-bottom: 15px;
+  }
+
+  .service:last-child {
+    margin-bottom: 0;
+  }
+
   .visually-hidden {
     display: none;
   }
 }
 
 @media (max-width: 374px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .slider__wrapper {
+    padding: 0;
+  }
+
   .slide-2 {
     border-bottom-width: 13px;
+  }
+
+  .our-services__wrapper {
+    padding-top: 36px;
+    padding-bottom: 7px;
   }
 }
