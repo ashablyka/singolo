@@ -1158,6 +1158,15 @@ ul {
     margin-bottom: 18px;
   }
 
+  .footer__wrapper {
+    justify-content: center;
+    padding: 22px 32px 22px 42px;
+  }
+
+  .copyright-logo {
+    display: none;
+  }
+
   .visually-hidden {
     display: none;
   }
@@ -1194,5 +1203,9 @@ ul {
   .get-a-quote__wrapper {
     padding-top: 52px;
     padding-bottom: 38px;
+  }
+
+  .footer__wrapper {
+    padding: 22px 32px 22px 42px;
   }
 }
