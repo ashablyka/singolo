@@ -922,6 +922,19 @@ ul {
   .service {
     margin-bottom: 40px;
   }
+
+  .section-description {
+    letter-spacing: 0.05px;
+  }
+
+  .portfolio__buttons {
+    margin-bottom: 27px;
+  }
+
+  .gallery__picture {
+    width: calc((100% - 40px) / 3);
+    height: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1021,6 +1034,28 @@ ul {
     margin-bottom: 0;
   }
 
+  .portfolio__wrapper {
+    padding-top: 51px;
+    padding-bottom: 20px;
+  }
+
+  .portfolio__buttons {
+    margin-bottom: 24px;
+  }
+
+  .portfolio__description {
+    margin-bottom: 14px;
+  }
+
+  .gallery__picture {
+    width: calc((100% - 13px) / 2);
+    margin-bottom: 14px;
+  }
+
+  .gallery__picture:nth-child(n + 9) {
+    display: none;
+  }
+
   .visually-hidden {
     display: none;
   }
@@ -1042,5 +1077,10 @@ ul {
   .our-services__wrapper {
     padding-top: 36px;
     padding-bottom: 7px;
+  }
+
+  .portfolio__wrapper {
+    padding-top: 51px;
+    padding-bottom: 20px;
   }
 }
