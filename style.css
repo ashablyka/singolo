@@ -976,7 +976,7 @@ ul {
     margin-bottom: 12px;
   }
 
-  .textarea  {
+  .textarea {
     height: 158px;
     margin-bottom: 16px;
   }
@@ -1189,5 +1189,10 @@ ul {
   .about-us__wrapper {
     padding-top: 44px;
     padding-bottom: 4px;
+  }
+
+  .get-a-quote__wrapper {
+    padding-top: 52px;
+    padding-bottom: 38px;
   }
 }
