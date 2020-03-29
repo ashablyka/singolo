@@ -376,6 +376,7 @@
                 name="name"
                 id="name"
                 placeholder="Name (Required)"
+                pattern="[A-Za-zА-яа-я-\s']+"
                 required
               />
               <input
@@ -384,6 +385,7 @@
                 name="email"
                 id="email"
                 placeholder="Email (Required)"
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
                 required
               />
               <input
